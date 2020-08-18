@@ -1,11 +1,24 @@
 const burger = document.querySelector('.burger');
 const LinkModal = document.querySelector('.nav-links');
-const navLinks = document.querySelectorAll('.nav-link > a')
+const navLinks = document.querySelectorAll('.nav-link > a');
 
+// Prevent animations triggering on window resizes
+let resizeTimer;
+window.addEventListener("resize", () => {
+  document.body.classList.add("resize-animation-stopper");
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.body.classList.remove("resize-animation-stopper");
+  }, 400);
+});
+
+// Trigger sidebar for mobile from burger icon
 burger.addEventListener('click', () => {
-  console.log('clicked');
+  
+  // Bring in sidebar
   LinkModal.classList.toggle('nav-active');
 
+  // Trigger animation on individual links
   navLinks.forEach((link, index) => {
     if (link.style.animation) {
       link.style.animation = '';
@@ -14,6 +27,7 @@ burger.addEventListener('click', () => {
     }
   });
 });
+
 
 
 
