@@ -26,6 +26,9 @@ burger.addEventListener('click', () => {
       link.style.animation = `nav-link-fade 0.5s ease forwards ${index / 9 + 0.1}s`
     }
   });
+
+  // Trigger burger animation
+  burger.classList.toggle('burger-state');
 });
 
 

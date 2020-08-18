@@ -47,6 +47,7 @@
     height: 3px;
     background-color: var(--off-white--);
     margin: 5px;
+    transition: all 0.3s ease;
 }
 
 .logo {
@@ -131,7 +132,8 @@ h4 {
     .nav-links {
         position: absolute;
         left: 0;
-        height: 93vh;
+        height: 100vh;
+        width: 150px;
         top: 7vh;
         background-color: var(--dark-color--);
         display: flex;
@@ -156,6 +158,18 @@ h4 {
 @keyframes nav-link-fade {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+.burger-state .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-state .line2 {
+    opacity: 0;
+}
+
+.burger-state .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /***********************************
