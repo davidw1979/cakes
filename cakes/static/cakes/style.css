@@ -17,8 +17,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-    Font-Size: 16px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 .resize-animation-stopper * {
@@ -26,9 +29,9 @@
     transition: none !important;
 }
 
-/*********************************
-******  HEADER & NAVIGATION ******
-*********************************/
+/****************************
+******  NAVIGATION BAR ******
+****************************/
 
 .title-bar {
     display: grid;
@@ -69,7 +72,7 @@
     margin: 0 1em;
 }
 
-h1 {
+.logo > h3 {
     Font-Family: 'Oswald', Sans-Serif;
     Font-Size: 24px;
     color: var(--off-white--);
@@ -181,4 +184,67 @@ h1 {
 
 .burger-state .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/***************************
+******  HEADER & HERO ******
+***************************/
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    padding: .5em 1.25em;
+    background: var(--quad-color--);
+    border-radius: 50px;
+    transition:
+        transform 250ms ease-in-out;
+}
+
+.btn:hover, .btn:focus {
+    transform: scale(1.1);
+}
+
+.primary-title {
+    font-size: 4rem;
+    font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.hero {
+    color: white;
+    text-align: center;
+    padding: 15em 0;
+    background: #222;
+}
+
+@supports (background-blend-mode: multiply) {
+    .hero {
+        background: url(./images/choc-cake-slice.png),
+            radial-gradient(#444, #111);
+        background-blend-mode: multiply;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+}
+
+/* applies next to all children of class without sibling before */
+.spacing > * + * {
+    margin-top: var(--spacer, 2rem);
 }

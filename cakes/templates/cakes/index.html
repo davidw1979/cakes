@@ -1,10 +1,72 @@
 {% extends "cakes/base.html" %}
 
 {% block body %}
-    <h1>Cakes</h1>
+
+    <header class="hero">
+        <div class="container spacing">
+            <h1 class="primary-title">Amazing cakes at amazing prices</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos distinctio natus voluptatum enim provident commodi voluptatibus minima laboriosam rem magnam molestiae, porro debitis corrupti iure assumenda aspernatur officia qui perferendis.</p>
+            <a href="#" class="btn">Get in touch</a>
+        </div>
+    </header>
+    <main>
+        <section class="featured">
+            <div class="container">
+                <h2 class="section-title">Our Cakes</h2>
+                <div class="split">
+                    <a href="" class="featured__item">
+                        <img src="" alt="" class="featured__img">
+                        <p class="featured__details"></p>
+                    </a>
+                    <a href="" class="featured__item">
+                        <img src="" alt="" class="featured__img">
+                        <p class="featured__details"></p>
+                    </a>
+                    <a href="" class="featured__item">
+                        <img src="" alt="" class="featured__img">
+                        <p class="featured__details"></p>
+                    </a>
+                    <a href="" class="featured__item">
+                        <img src="" alt="" class="featured__img">
+                        <p class="featured__details"></p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="our-products">
+            <div class="container">
+                <h2 class="section-title">Our Products</h2>
+
+                <article class="product">
+                    <img src="" alt="" class="product__image">
+                    <h3 class="product__title"></h3>
+                    <p class="product__description"></p>
+                    <a href="" class="btn"></a>
+                </article>
+
+                <article class="product">
+                    <img src="" alt="" class="product__image">
+                    <h3 class="product__title"></h3>
+                    <p class="product__description"></p>
+                    <a href="" class="btn"></a>
+                </article>
+
+                <article class="product">
+                    <img src="" alt="" class="product__image">
+                    <h3 class="product__title"></h3>
+                    <p class="product__description"></p>
+                    <a href="" class="btn"></a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!--<h1>Cakes</h1>
     <ul>
         {% for cake in cakes %}
             <li>{{ cake.name }}</li>
         {% endfor %}
-    </ul>
+    </ul>-->
 {% endblock %}
