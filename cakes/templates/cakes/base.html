@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!--Import FontAwesome icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+    <!--Import own CSS stylesheet-->
+    <link rel="stylesheet" type="text/css" href="{% static 'cakes/style.css' %}">
+    <title>ELC</title>
+</head>
+<body>
+    <nav class="title-bar">
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <div class="logo">
+            <img src="{% static 'cakes/images/logo2.png' %}" alt="cake">
+            <h1>Everybody Loves Cake</h1>
+        </div>
+        <div class="social">
+            <a aria-label="instagram" href="https://www.instagram.com/ebl_cake/"><i class="social-icon fab fa-instagram"></i></a>
+            <a aria-label="facebook" href="https://www.facebook.com/EBLcake"><i class="social-icon fab fa-facebook-f"></i></a>
+            <a aria-label="pinterest" href="#"><i class="social-icon fab fa-pinterest-p"></i></a>
+        </div>
+    </nav>
+  
+    <div class="main-bg">
+        <nav class="links-bar"> 
+            <ul class="nav-links">
+                <li class="nav-link"><a href="#">Wedding</a></li>
+                <li class="nav-link"><a href="#">Birthday</a></li>
+                <li class="nav-link"><a href="#">Occasions</a></li>
+                <li class="nav-link"><a href="#">Cookies</a></li>
+                <li class="nav-link"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        {% block body %}
+
+        {% endblock %}
+    </div>
+
+    <script src="{% static 'cakes/app.js' %}"></script>
+</body>
+</html>
