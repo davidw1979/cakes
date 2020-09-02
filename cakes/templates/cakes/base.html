@@ -22,7 +22,7 @@
             <div class="line3"></div>
         </div>
         <div class="logo">
-            <img src="{% static 'cakes/images/logo2.png' %}" alt="cake">
+            <a href="{% url 'cakes:index' %}"><img src="{% static 'cakes/images/logo2.png' %}" alt="cake"></a>
             <h3>Everybody Loves Cake</h3>
         </div>
         <div class="social">
@@ -32,14 +32,14 @@
         </div>
     </nav>
   
-    <div class="main-bg">
+    <div class="main-bg {{ no_hero }}">
         <nav class="links-bar"> 
-            <ul class="nav-links">
-                <li class="nav-link"><a href="#">Wedding</a></li>
-                <li class="nav-link"><a href="#">Birthday</a></li>
-                <li class="nav-link"><a href="#">Occasions</a></li>
-                <li class="nav-link"><a href="#">Cookies</a></li>
-                <li class="nav-link"><a href="#">Contact</a></li>
+            <ul class="nav-links {{ hero_present }}">
+                <li class="nav-link"><a href="{% url 'cakes:products' %}">Wedding</a></li>
+                <li class="nav-link"><a href="{% url 'cakes:products' %}">Birthday</a></li>
+                <li class="nav-link"><a href="{% url 'cakes:products' %}">Occasions</a></li>
+                <li class="nav-link"><a href="{% url 'cakes:cookies' %}">Cookies</a></li>
+                <li class="nav-link"><a href="{% url 'cakes:contact' %}">Contact</a></li>
             </ul>
         </nav>
         {% block body %}
