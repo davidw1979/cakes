@@ -7,21 +7,51 @@
     <main>
         <section id="contact-lead">
             <div class="card about-card">
-              <img src="{% static 'cakes/images/tack.svg' %}" alt="tack" class="tack">
-              <div class="profile-sidebar">
-                <img id="nicola" src="{% static 'cakes/images/avatar.png' %}" alt="nicola">
-                <div class="social card-social">
-                  <a aria-label="instagram" href="https://www.instagram.com/ebl_cake/"><i class="social-icon fab fa-instagram"></i></a>
-                  <a aria-label="facebook" href="https://www.facebook.com/EBLcake"><i class="social-icon fab fa-facebook-f"></i></a>
-                  <a aria-label="pinterest" href="#"><i class="social-icon fab fa-pinterest-p"></i></a>
+                <img src="{% static 'cakes/images/tack.svg' %}" alt="tack" class="tack">
+                <div class="profile-sidebar">
+                    <img id="nicola" src="{% static 'cakes/images/avatar.png' %}" alt="nicola">
+                    <div class="social card-social">
+                        <a aria-label="instagram" href="https://www.instagram.com/ebl_cake/"><i class="social-icon fab fa-instagram"></i></a>
+                        <a aria-label="facebook" href="https://www.facebook.com/EBLcake"><i class="social-icon fab fa-facebook-f"></i></a>
+                        <a aria-label="pinterest" href="#"><i class="social-icon fab fa-pinterest-p"></i></a>
+                    </div>
                 </div>
-              </div>
-              <div class="profile-main">
-                <h2 class="profile-name">Nicola Stewart</h2>
-                <p class="profile-position">Cake Maker Extraordinaire</p>
-                <p class="profile-body">Creator of luxury, modern wedding & celebration cakes. Fusing exceptional design, exquisite craftsmanship and the finest ingredients, I put love and care into every bite.</p>
-              </div>  
+                <div class="profile-main">
+                    <h2 class="profile-name">Nicola Stewart</h2>
+                    <p class="profile-position">Cake Maker Extraordinaire</p>
+                    <p class="profile-body">Creator of luxury, modern wedding & celebration cakes. Fusing exceptional design, exquisite craftsmanship and the finest ingredients, I put love and care into every bite.</p>
+                </div>  
             </div>
+        </section>
+
+        <section id="contact">
+            <div class="container card">
+                <form action="" id="contact-form" class="form">
+                    <h2>Get in touch</h2>
+                    <div class="form-control">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Name">
+                        <small>error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Enter email">
+                        <small>error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" placeholder="Enter phone no">
+                        <small>error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label for="message">Message</label>
+                        <textarea id="message"></textarea>
+                        <small>error message</small>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
     </main>
 
 {% endblock %}
